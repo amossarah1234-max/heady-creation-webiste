@@ -1,1 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Heady Creation | Design & Printing Agency</title>
+
+    <meta name="description" content="Heady Creation is a professional creative design and printing agency established in 2019. We bring ideas to life through creative design and quality printing.">
+
+    <style>
+
+        /* GENERAL STYLING */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FDFDFD;
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        :root {
+            --black: #000000;
+            --blue: #022091;
+            --white: #FDFDFD;
+            --yellow: #F4E600;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: var(--blue);
+            padding: 15px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 130px;
+            height: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 580px;
+            background-color: var(--blue);
+            color: var(--white);
+            padding: 120px 10%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            line-height: 1.15;
+            margin-bottom: 25px;
+        }
+
+        .hero-content h1 span {
+            color: var(--yellow);
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--yellow);
+            color: var(--black);
+            padding: 14px 28px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: var(--white);
+        }
+
+        /* SECTION GENERAL */
+
+        section {
+            padding: 85px 8%;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            color: var(--blue);
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #555555;
+        }
+
+        /* ABOUT SECTION */
+
+        .about {
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .about-content p {
+            font-size: 16px;
+            margin-bottom: 18px;
+            color: #444444;
+        }
+
+        .year {
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        /* SERVICES SECTION */
+
+        .services {
+            background-color: #F2F4FA;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 35px 25px;
+            border-radius: 6px;
+            border-bottom: 4px solid var(--blue);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            border-bottom-color: var(--yellow);
+        }
+
+        .service-card h3 {
+            color: var(--blue);
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: #555555;
+            font-size: 14px;
+        }
+
+        /* PORTFOLIO SECTION */
+
+        .portfolio {
+            background-color: var(--white);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .portfolio-item {
+            background-color: #F1F1F1;
+            min-height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #DDDDDD;
+        }
+
+        .portfolio-item p {
+            color: var(--blue);
+            font-weight: bold;
+        }
+
+        /* WHY CHOOSE US */
+
+        .choose {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        .choose .section-heading h2 {
+            color: var(--yellow);
+        }
+
+        .choose .section-heading p {
+            color: var(--white);
+        }
+
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .choose-card h3 {
+            color: var(--yellow);
+            margin-bottom: 12px;
+        }
+
+        /* CONTACT SECTION */
+
+        .contact {
+            text-align: center;
+            background-color: #F2F4FA;
+        }
+
+        .contact-content {
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .contact-content p {
+            margin-bottom: 25px;
+            color: #444444;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer span {
+            color: var(--yellow);
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 450px;
+                padding: 80px 7%;
+            }
+
+            .hero-content h1 {
+                font-size: 38px;
+            }
+
+            .hero-content p {
+                font-size: 15px;
+            }
+
+            .service-grid,
+            .portfolio-grid,
+            .choose-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 7%;
+            }
+
+            .section-heading h2 {
+                font-size: 29px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            <a href="#home">
+                <img src="heady-logo.jpg" alt="Heady Creation Logo">
+            </a>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Creative Ideas.<br>
+                <span>Exceptional Designs.</span>
+                Lasting Impressions.
+            </h1>
+
+            <p>
+                Welcome to Heady Creation, your creative partner
+                for professional graphic design, branding,
+                printing and innovative visual solutions.
+                We transform ideas into outstanding designs.
+            </p>
+
+            <a href="#services" class="button">
+                Explore Our Services
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+
+    <section class="about" id="about">
+
+        <div class="section-heading">
+
+            <h2>About Heady Creation</h2>
+
+            <p>Creativity is at the heart of everything we do.</p>
+
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                Established in <span class="year">2019</span>,
+                Heady Creation was born out of a passion for
+                creativity and the desire to transform ideas
+                into meaningful visual experiences.
+            </p>
+
+            <p>
+                We believe every idea has the potential to
+                become something extraordinary when brought
+                to life through creativity, skill and innovation.
+            </p>
+
+            <p>
+                From graphic design and brand identity to
+                professional printing and creative solutions,
+                we help individuals and businesses communicate
+                their ideas with confidence.
+            </p>
+
+            <p>
+                At Heady Creation, we don't just create designs;
+                we bring ideas to life.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+
+    <section class="services" id="services">
+
+        <div class="section-heading">
+
+            <h2>Our Services</h2>
+
+            <p>
+                Creative solutions designed to make your brand stand out.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <h3>Graphic Design</h3>
+                <p>
+                    Creative flyers, posters, banners,
+                    social media graphics and promotional designs.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Brand Identity</h3>
+                <p>
+                    Professional logo designs, brand identity
+                    development and visual branding solutions.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Printing Services</h3>
+                <p>
+                    Quality printing solutions for individuals,
+                    businesses and organisations.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Business Stationery</h3>
+                <p>
+                    Business cards, letterheads, envelopes
+                    and other professional stationery designs.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Packaging Design</h3>
+                <p>
+                    Creative packaging and product presentation
+                    designs that communicate your brand.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Creative Solutions</h3>
+                <p>
+                    Innovative visual communication and
+                    customised design solutions for different needs.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO SECTION -->
+
+    <section class="portfolio" id="portfolio">
+
+        <div class="section-heading">
+
+            <h2>Our Portfolio</h2>
+
+            <p>
+                A showcase of creativity, passion and professional design.
+            </p>
+
+        </div>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-item">
+                <p>Brand Identity Projects</p>
+            </div>
+
+            <div class="portfolio-item">
+                <p>Flyer & Poster Designs</p>
+            </div>
+
+            <div class="portfolio-item">
+                <p>Printing Projects</p>
+            </div>
+
+            <div class="portfolio-item">
+                <p>Business Stationery</p>
+            </div>
+
+            <div class="portfolio-item">
+                <p>Packaging Designs</p>
+            </div>
+
+            <div class="portfolio-item">
+                <p>Creative Visual Projects</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="choose">
+
+        <div class="section-heading">
+
+            <h2>Why Choose Heady Creation?</h2>
+
+            <p>
+                Your vision deserves thoughtful creativity and excellence.
+            </p>
+
+        </div>
+
+        <div class="choose-grid">
+
+            <div class="choose-card">
+                <h3>Creativity</h3>
+                <p>
+                    We approach every project with fresh ideas
+                    and creative thinking.
+                </p>
+            </div>
+
+            <div class="choose-card">
+                <h3>Professionalism</h3>
+                <p>
+                    We value quality, attention to detail
+                    and professional service.
+                </p>
+            </div>
+
+            <div class="choose-card">
+                <h3>Commitment</h3>
+                <p>
+                    We are committed to turning ideas into
+                    meaningful creative experiences.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+
+    <section class="contact" id="contact">
+
+        <div class="section-heading">
+
+            <h2>Let's Create Something Amazing</h2>
+
+            <p>
+                Have a project in mind? Let's bring your ideas to life.
+            </p>
+
+        </div>
+
+        <div class="contact-content">
+
+            <p>
+                Get in touch with Heady Creation for professional
+                graphic design, branding and printing services.
+            </p>
+
+            <a href="#"
+               class="button">
+                Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 <span>Heady Creation.</span>
+            All Rights Reserved.
+        </p>
+
+        <p>
+            Creativity. Innovation. Excellence.
+        </p>
+
+    </footer>
+
+</body>
+</html>
