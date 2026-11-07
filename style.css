@@ -1,0 +1,341 @@
+/* BRAND COLOURS */
+
+:root {
+    --black: #000000;
+    --blue: #022091;
+    --white: #FDFDFD;
+    --yellow: #F4E600;
+}
+
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: var(--blue);
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 130px;
+    height: auto;
+    display: block;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--yellow);
+}
+
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 580px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 120px 10%;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: var(--yellow);
+}
+
+.hero-content p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: var(--black);
+    padding: 14px 28px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--white);
+}
+
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 85px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    color: var(--blue);
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    color: #555555;
+}
+
+
+/* ABOUT SECTION */
+
+.about {
+    background-color: var(--white);
+    text-align: center;
+}
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.about-content p {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: #444444;
+}
+
+.year {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+/* SERVICES SECTION */
+
+.services {
+    background-color: #F2F4FA;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 35px 25px;
+    border-radius: 6px;
+    border-bottom: 4px solid var(--blue);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    border-bottom-color: var(--yellow);
+}
+
+.service-card h3 {
+    color: var(--blue);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #555555;
+    font-size: 14px;
+}
+
+
+/* PORTFOLIO SECTION */
+
+.portfolio {
+    background-color: var(--white);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #F1F1F1;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #DDDDDD;
+}
+
+.portfolio-item p {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+/* WHY CHOOSE US */
+
+.choose {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.choose .section-heading h2 {
+    color: var(--yellow);
+}
+
+.choose .section-heading p {
+    color: var(--white);
+}
+
+.choose-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.choose-card h3 {
+    color: var(--yellow);
+    margin-bottom: 12px;
+}
+
+
+/* CONTACT SECTION */
+
+.contact {
+    text-align: center;
+    background-color: #F2F4FA;
+}
+
+.contact-content {
+    max-width: 650px;
+    margin: auto;
+}
+
+.contact-content p {
+    margin-bottom: 25px;
+    color: #444444;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer span {
+    color: var(--yellow);
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 80px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .service-grid,
+    .portfolio-grid,
+    .choose-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 65px 7%;
+    }
+
+    .section-heading h2 {
+        font-size: 29px;
+    }
+
+}
